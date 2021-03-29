@@ -1,0 +1,19 @@
+/* Styles for Portfolio Challenge */
+:root {
+--fadedorange: rgba(255, 153, 51, .1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--fadedorange);
+}
+/*Delete this when final layout is complete*/
+header, nav, section, article, aside, footer, div {
+    border: 1px solid black;
+}
+
