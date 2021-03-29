@@ -1,6 +1,12 @@
 /* Styles for Portfolio Challenge */
 :root {
---fadedorange: rgba(255, 153, 51, .1);
+--fadedorange: rgba(255, 153, 51, .2);
+--orange: rgba(255,153,51,1.0);
+--sizzlingred: rgba(255, 51, 85, 1.0);
+--chartreuse: rgba(221, 255, 51, 1.0);
+--dodgerblue: rgba(51, 153, 255, 1.0);
+--vividviolet: rgba(153, 51, 255, 1.0);
+
 }
 
 * {
@@ -10,8 +16,113 @@
 body {
     margin: 0;
     padding: 0;
+    max-width: 100%;
     background-color: var(--fadedorange);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-flow: row wrap;
 }
+
+
+header {
+    background-color: var(--orange);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    margin:0;
+}
+
+header h1 {
+    width: 100%;
+    text-align: center;
+    margin: .2em;
+}
+
+header nav { /*Delete this if no styles are applied*/
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    flex: 1;
+}
+
+header nav a {
+    display: block;
+    padding: .3em;
+    text-decoration: none;
+    border: 1px solid black;
+    text-align: center;
+}
+
+main {
+    max-width: 100%;
+}
+
+main div, main article {
+    padding: .3em;
+}
+
+aside {
+    max-width: 100%;
+}
+
+.img-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: .25em;
+}
+
+.img-wrapper img {
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+
+.aside-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.aside-links h3 {
+    text-align: center;
+    margin: .25em;
+}
+
+.aside-links ul li a {
+    display: block;
+    padding: .3em;
+    text-decoration: none;
+    border: 1px solid black;
+    text-align: center;
+}
+.card-wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card-wrapper img {
+    max-width: 100%;
+}
+
+footer {
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    padding: .1em .3em;
+    margin: 0;
+    width: 100vw;
+}
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
 /*Delete this when final layout is complete*/
 header, nav, section, article, aside, footer, div {
     border: 1px solid black;
