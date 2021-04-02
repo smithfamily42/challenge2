@@ -10,7 +10,7 @@
 </head>
 <body>
     <header><!--make this sticky-->
-        <h1>Brad Smith</h1>
+        <h1 class="fade-in header-shadow">Brad Smith</h1>
     <nav><!--center on mobile, right side on desktop-->
         <ul>
             <li><a href="#about">About</a></li>
@@ -28,7 +28,7 @@
             <div class="aside-links"> <!--links-->
                 <h3>Links</h3>
                 <ul>
-                    <li><a href="www.linkedin.com/in/bradley-smith-64586b21" target="_blank">
+                    <li><a href="https://www.linkedin.com/in/bradley-smith-64586b21/" target="_blank">
                         LinkedIn</a></li>
                     <li><a href="https://www.freecodecamp.org/smithfamily42" target="_blank">FreeCodeCamp</a></li>
                     <li><a href="https://codepen.io/smithfamily42" target="_blank">CodePen</a></li>
@@ -46,41 +46,57 @@
             <article id="work"><!--Main Project-->
                 <h2>Recent Project</h2>
                 <div class="img-wrapper">
-                    <img src="https://via.placeholder.com/728x300.png?text=Placeholder+Image" alt="placeholder image" />
+                    <a href="https://smithfamily42.github.io/challenge2/" target="_blank"><img class="main-img" src="./assets/images/currentProject.jpg" alt="Most recent project" /></a>
+                    <div class="img-banner"><!--for text on the image-->
+                        <h4>Current Project</h4>
+                        <p>Working Portfolio Project (HTML, CSS, GitHub)</p>
+                    </div>
                 </div>
             </article>
             <article id="other-work"><!--project cards--><!--mobile it will be 2x3 in desktop it will be 3x2-->
                 <h3>Other Projects</h3>
                     <div class="card-wrapper"><!--wrapper for other project cards-->
                         <div class="card">
-                            <img src="https://via.placeholder.com/225x75.png?text=Placeholder+Image" alt="placeholder image" />
-                            <h4>First Project</h4>
-                            <p>Project Description</p>
+                            <a href="https://codepen.io/smithfamily42/full/BazgvwM" target="_blank"><img src="./assets/images/prevPortfolio.png" alt="image of previous portfolio" /></a>
+                            <div class="img-banner">
+                                <h4>Previous Portfolio</h4>
+                                <p>Prior portfolio project</p>
+                            </div>
                         </div>
                         <div class="card">
-                            <img src="https://via.placeholder.com/225x75.png?text=Placeholder+Image" alt="placeholder image" />
-                            <h4>Second Project</h4>
-                            <p>Project Description</p>
+                            <a href="https://codepen.io/smithfamily42/full/rNLrLpE" target="_blank"><img src="./assets/images/techDoc.png" alt="Technical documenation page" /></a>
+                            <div class="img-banner">
+                                <h4>Technical Documentation</h4>
+                                <p>Page created for connecting a docking station</p>
+                            </div>
                         </div>
                         <div class="card">
-                            <img src="https://via.placeholder.com/225x75.png?text=Placeholder+Image" alt="placeholder image" />
-                            <h4>Third Project</h4>
-                            <p>Project Description</p>
+                            <a href="https://codepen.io/smithfamily42/full/NWNmdyw" target="_blank"><img src="./assets/images/tribute.png" alt="Tribute page to my daughter" /></a>
+                            <div class="img-banner">
+                                <h4>Adrienne's Page</h4>
+                                <p>This page was created for college applications</p>
+                            </div>
                         </div>
                         <div class="card">
-                            <img src="https://via.placeholder.com/225x75.png?text=Placeholder+Image" alt="placeholder image" />
-                            <h4>Fourth Project</h4>
-                            <p>Project Description</p>
+                            <a href="http://www.generationdcd.com/home" target="_blank"><img src="./assets/images/forthComing.png" alt="project that is in the works" /></a>
+                            <div class="img-banner">
+                                <h4>Generation DCD Website</h4>
+                                <p>Squarespace Site</p>
+                            </div>
                         </div>
-                        <div class="card">
+                       <div class="card hidden"> <!--This element is hidden but available to use later when you add another project-->
                             <img src="https://via.placeholder.com/225x75.png?text=Placeholder+Image" alt="placeholder image" />
-                            <h4>Fifth Project</h4>
-                            <p>Project Description</p>
+                            <div class="img-banner">
+                                <h4>Fifth Project</h4>
+                                <p>Project Description</p>
+                            </div>
                         </div>
-                        <div class="card">
+                        <div class="card hidden"> <!--This element is hidden but available to use later when you add another project-->
                             <img src="https://via.placeholder.com/225x75.png?text=Placeholder+Image" alt="placeholder image" />
-                            <h4>Sixth Project</h4>
-                            <p>Project Description</p>
+                            <div class="img-banner">
+                                <h4>Sixth Project</h4>
+                                <p>Project Description</p>
+                            </div>
                         </div>
                     </div><!--Ends Card Wrapper-->
             </article>

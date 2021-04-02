@@ -3,9 +3,10 @@
 --fadedorange: rgba(255, 153, 51, .2);
 --orange: rgba(255,153,51,1.0);
 --sizzlingred: rgba(255, 51, 85, 1.0);
---chartreuse: rgba(221, 255, 51, 1.0);
---dodgerblue: rgba(51, 153, 255, 1.0);
+--chartreuse: rgba(221, 255, 51, .20);
+--dodgerblue: rgba(51, 153, 255, 0.8);
 --vividviolet: rgba(153, 51, 255, 1.0);
+--white: rgba(255,255,255, 1.0);
 
 }
 
@@ -31,12 +32,17 @@ header {
     width: 100%;
     top: 0;
     margin:0;
+    z-index: 9999;
+    border-bottom: outset .15em var(--dodgerblue);
 }
 
 header h1 {
     width: 100%;
     text-align: center;
     margin: .2em;
+}
+header nav {
+    padding-right: .5em;
 }
 
 header nav ul {
@@ -53,8 +59,13 @@ header nav a {
     display: block;
     padding: .3em;
     text-decoration: none;
-    border: 1px solid black;
     text-align: center;
+}
+header nav ul li a:hover, header nav ul li a:focus {
+    color: var(--white);
+    background-color: var(--dodgerblue);
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 main {
@@ -67,20 +78,38 @@ main div, main article {
 
 aside {
     max-width: 100%;
+    padding-top: .25em;
 }
 
 .img-wrapper {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     padding: .25em;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
 }
 
 .img-wrapper img {
-    max-width: 100%;
-    margin:0;
-    padding:0;
+    width: 100%;
+    height: auto;
+    border: outset .15em var(--dodgerblue);
 }
-
+.img-banner {
+    position: absolute;
+    margin-bottom: .25em;
+    word-break: break-word;
+    background: var(--dodgerblue);
+    color: var(--white);
+    max-width: 80%;
+    padding: .5em;
+    border: 1px solid black;
+    border-radius: .5em;
+}
+.aside-links {
+    width: 80%;
+    margin: 0 auto;
+}
 .aside-links ul {
     list-style-type: none;
     margin: 0;
@@ -96,24 +125,46 @@ aside {
     display: block;
     padding: .3em;
     text-decoration: none;
-    border: 1px solid black;
     text-align: center;
 }
+
+.aside-links ul li a:hover, .aside-links ul li a:focus {
+    color: var(--white);
+    background-color: var(--dodgerblue);
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
 section {
     flex: 100%;
 }
-#work h2, #other-work h3 {
+#about h2, #work h2, #other-work h3 {
     text-align: center;
+    text-shadow: 1px 0px var(--dodgerblue);
+
 }
+.header-shadow {
+    text-shadow: -1px -1px 1px var(--white),
+    -2px -2px 1px #666;
+   }
 
 .card-wrapper {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto;  
 }
-
+.card {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+.card .img-banner {
+    font-size: 75%;
+}
 .card img {
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    border: solid .15em var(--dodgerblue);
 }
 
 footer {
@@ -123,16 +174,17 @@ footer {
     padding: .1em .3em;
     margin: 0;
     width: 100%;
-
+    border-top: outset .15em var(--dodgerblue);
 }
 footer p {
     margin: 0;
     padding: 0;
 }
 
-/*Delete this when final layout is complete*/
-header, nav, section, article, aside, footer, div {
-    border: 1px solid black;
+@media only screen and (max-width: 767px) {
+    .hidden {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) { /* media query for tablets */
@@ -140,12 +192,15 @@ header, nav, section, article, aside, footer, div {
 body {
     display: block;
 }
-
 header {
     display: flex;
-    flex: 50%;
 }
-header nav { /*Delete this if no styles are applied*/
+header h1 {
+    display: flex;
+    flex: 50%;
+    padding-left: 20%;
+}
+header nav { 
     flex: 50%;
 }
 header nav ul {
@@ -168,8 +223,12 @@ aside {
 
 .img-wrapper {
     width: 100%;
-    margin: 0 auto;
     padding: 0;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: auto;
 }
 
 .aside-links ul li a {
@@ -182,6 +241,12 @@ main {
 section {
 
     flex: 100%;
+}
+article {
+    border-bottom: groove .3em var(--dodgerblue);
+}
+article:last-child {
+    border-bottom: none;
 }
 
 .card-wrapper {
@@ -202,13 +267,16 @@ footer {
     padding: .75em;
 }
 footer .copyright {
-    width: 50%;
+    flex: 50%;
 }
 footer div {
-    width: 50%;
+    flex: 50%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+}
+.hidden{
+    display: none;
 }
 }
 
@@ -216,4 +284,74 @@ footer div {
 .card {
         flex: 30%;
     }
+
+aside {
+        flex: 20%;
+    }
+.img-wrapper {
+    width: 80%;
+}
+    
+.main-img{
+    max-width: 100%;
+    max-height: 50vh;
+}
+.hidden {
+        visibility: hidden;
+        display: initial;
+    } 
+/* The fade in style and annimation are from Tremaine Eto and found: 
+https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08 */
+    .fade-in {
+        animation: fadeIn ease 2s;
+        -webkit-animation: fadeIn ease 2s;
+        -moz-animation: fadeIn ease 2s;
+        -o-animation: fadeIn ease 2s;
+        -ms-animation: fadeIn ease 2s;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-o-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-ms-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+      }
+
+}
 }
